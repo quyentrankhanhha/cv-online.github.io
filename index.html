@@ -12,6 +12,10 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
     <title>Ha Quyen's CV</title>
 </head>
 
@@ -61,21 +65,21 @@
     </header>
 
     <main class="l-main bd-container">
-        <div class="resume">
+        <div class="resume" id="area-cv">
             <div class="resume__left">
                 <!--==================== HOME ====================-->
                 <section class="home" id="home">
-                    <div class="home_container section bd-grid">
-                        <div class="home__data bd-grid">
+                    <div class="home_container section grid">
+                        <div class="home__data grid">
                             <img src="" alt="" class="home__img">
                             <h1 class="home__title">HA <b>QUYEN</b></h1>
                             <h3 class="home__profession">Web developer</h3>
-                            <!-- Button to download CV -->
+                            <!-- Button to download CV
                             <div>
                                 <a download="" href="" class="home__button-movil">Download</a>
-                            </div>
+                            </div> -->
                         </div>
-                        <div class="home__adress bd-grid">
+                        <div class="home__adress grid">
                             <span class="home__information">
                                 <i class="bx bx-map home__icon"></i> Oulu, Finland
                             </span>
@@ -87,12 +91,16 @@
                             </span>
                         </div>
                     </div>
+                    <!-- Theme change button -->
+                    <i class="bx bx-moon change-theme" title="Theme" id="theme-button"></i>
+                    <!-- Button to generate and download the pdf (desktop)-->
+                    <i class="bx bx-download generate-pdf" title="Generate PDF" id="resume-button"></i>
                 </section>
 
                 <!--==================== SOCIAL ====================-->
                 <section class="social section" id="social">
                     <h2 class="section-title">SOCIAL</h2>
-                    <div class="social__container bd-grid">
+                    <div class="social__container grid">
                         <a href="" target="_blank" class="social__link">
                             <i class="bx bxl-linkedin-square social__icon"></i> @haquyen
                         </a>
@@ -106,17 +114,47 @@
                     </p>
                 </section>
 
+                <!--==================== SKILLS ====================-->
+                <section class="skills section" id="skills">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="skills__content grid">
+                        <ul class="skills__data">
+                            <li class="skills__name">
+                                <span class="skills__circle"></span>HTML
+                            </li>
+                            <li class="skills__name">
+                                <span class="skills__circle"></span>CSS
+                            </li>
+                            <li class="skills__name">
+                                <span class="skills__circle"></span>SASS
+                            </li>
+                            <li class="skills__name">
+                                <span class="skills__circle"></span>Javascript
+                            </li>
+                        </ul>
+                        <ul class="skills__data">
+                            <li class="skills__name">
+                                <span class="skills__circle"></span>React
+                            </li>
+                            <li class="skills__name">
+                                <span class="skills__circle"></span>Material UI
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div class="resume__right">
                 <!--==================== EDUCATION ====================-->
                 <section class="education section" id="education">
                     <h2 class="section-title">Education</h2>
-                    <div class="education__container bd-grid">
+                    <div class="education__container grid">
                         <div class="education__content">
                             <div class="education__time">
                                 <span class="education__rounder"></span>
                                 <span class="education__line"></span>
                             </div>
 
-                            <div class="education__data bd-grid">
+                            <div class="education__data grid">
                                 <h3 class="education__title">bachelor</h3>
                                 <span class="education__studies">oamk</span>
                                 <span class="education__year">2019 - 2023</span>
@@ -127,7 +165,7 @@
                                 <span class="education__rounder"></span>
                             </div>
 
-                            <div class="education__data bd-grid">
+                            <div class="education__data grid">
                                 <h3 class="education__title">bachelor</h3>
                                 <span class="education__studies">oamk</span>
                                 <span class="education__year">2019 - 2023</span>
@@ -135,49 +173,77 @@
                         </div>
                     </div>
                 </section>
-                <!--==================== SKILLS ====================-->
-                <section class="services section" id="services">
-
+                <!--==================== EXPERIENCE ====================-->
+                <section class="experience section" id="experience">
+                    <h2 class="section-title">Experience</h2>
+                    <div class="experience__container grid">
+                        <div class="experience__content">
+                            <div class="experience__time">
+                                <span class="experience__rounder"></span>
+                                <!-- <span class="experience__line"></span> -->
+                            </div>
+                            <div class="experience__data grid">
+                                <h3 class="experience__title">From Aug 2021 to Nov 2021 | Software Intern</h3>
+                                <span class="experience__company">thuocsi.vn</span>
+                                <p class="experience__description">work in this position</p>
+                            </div>
+                        </div>
+                    </div>
 
                 </section>
 
-                <!--==================== SERVICES ====================-->
-                <section class="services section" id="services">
+                <!--==================== CERTIFICATES ====================-->
+                <section class="certificate section" id="certificates">
+                    <h2 class="section-title">Certificates</h2>
+                    <div class="certificate__container grid">
+                        <div class="certificate__content">
+                            <h3 class="certificate__title">CS 50</h3>
+                            <p class="certificate__despcription">work well with</p>
+                        </div>
+                        <div class="certificate__content">
+                            <h3 class="certificate__title">CS 50</h3>
+                            <p class="certificate__despcription">work well with</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!--==================== LANGUAGES ====================-->
+                <section class="languages section" id="language">
+                    <h2 class="section-title">Languages</h2>
+                    <div class="languages__container">
+                        <ul class="languagues__content grid">
+                            <li class="languagues__name">
+                                <span class="languages__circle"></span>English
+                            </li>
+                            <li class="languagues__name">
+                                <span class="languages__circle"></span>Vietnamese
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!--==================== PROJECTS IN MIND ====================-->
+                <section class="projects section" id="language">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="projects__container">
+                        <ul class="projects__content grid">
+                            <li class="projects__name">
+                                <span class="projects__circle"></span>Foodie and Lifestyle Blog
+                            </li>
+                            <li class="projects__name">
+                                <span class="projects__circle"></span>Pizza
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!--==================== TESTIMONIAL ====================-->
+                <section class="testimonial section">
 
 
                 </section>
-
-            </div>
-
-            <div class="resume__right">
 
             </div>
         </div>
-
-        <!--==================== PORTFOLIO ====================-->
-        <section class="portfolio section" id="portfolio">
-
-
-        </section>
-
-        <!--==================== PROJECT IN MIND ====================-->
-        <section class="project section">
-
-
-        </section>
-
-        <!--==================== TESTIMONIAL ====================-->
-        <section class="testimonial section">
-
-
-        </section>
-
-        <!--==================== CONTACT ME ====================-->
-        <section class="contact section" id="contact">
-
-
-        </section>
-
     </main>
 
     <!--==================== FOOTER ====================-->
@@ -187,10 +253,14 @@
     </footer>
 
     <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class="bx bx-up-arrow-alt scrolltop__icon"></i>
+    </a>
 
-
-    <!--==================== SWIPER JS ====================-->
-    <script src=""></script>
+    <!--==================== HTML TO PDF ====================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!--  MAIN JS -->
     <script src="./js/main.js"></script>
