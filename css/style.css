@@ -47,6 +47,10 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
   --title-color: #f2f2f2;
@@ -97,13 +101,13 @@ body.scale-cv {
 }
 
 /*========== Classes modified to reduce size and print on A4 sheet ==========*/
+.scale-cv .hq-container {
+  max-width: 595px;
+}
+
 .scale-cv .change-theme,
 .scale-cv .generate-pdf {
   display: none;
-}
-
-.scale-cv .bd-container {
-  max-width: 595px;
 }
 
 .scale-cv .section {
@@ -121,7 +125,6 @@ body.scale-cv {
 
 .scale-cv .home__img {
   width: 90px;
-  height: 90px;
 }
 
 .scale-cv .home__container {
@@ -184,6 +187,10 @@ body.scale-cv {
   margin-bottom: var(--mb-1);
 }
 
+.scale-cv .certificate__despcription {
+  padding: 0 var(--mb-3) 0 0;
+}
+
 body {
   margin: 0 0 var(--header-height) 0;
   padding: 0;
@@ -213,10 +220,6 @@ ul {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -237,7 +240,7 @@ img {
 }
 
 /*========== LAYOUT ==========*/
-.bd-container {
+.hq-container {
   max-width: 968px;
   width: calc(100% - 3rem);
   margin-left: var(--mb-3);
@@ -365,7 +368,6 @@ img {
 
 .home__img {
   width: 120px;
-  height: 120px;
   border-radius: 50%;
   justify-self: center;
   margin-bottom: var(--mb-1);
@@ -393,6 +395,13 @@ img {
 .home__icon {
   font-size: 1.2rem;
   margin-right: 0.25rem;
+}
+
+.home__link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
 }
 
 /*========== SOCIAL ==========*/
@@ -498,12 +507,22 @@ img {
 }
 
 /*========== CERTIFICATES ==========*/
-.certificate__title {
+.certificate__title,
+.projects__name {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-1);
 }
 
+.certificate__company {
+  margin: var(--mb-1) 0;
+}
+
 /*========== PROJECTS ==========*/
+.projects__link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+}
 
 /* Scroll top */
 .scrolltop {
@@ -545,7 +564,7 @@ img {
     margin: 3rem 0;
   }
 
-  .bd-container {
+  .hq-container {
     margin-left: auto;
     margin-right: auto;
   }

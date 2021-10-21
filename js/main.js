@@ -1,11 +1,3 @@
-/*==================== MENU SHOW Y HIDDEN ====================*/
-
-/*===== MENU SHOW =====*/
-/* Validate if constant exists */
-
-/*===== MENU HIDDEN =====*/
-/* Validate if constant exists */
-
 /*==================== SHOW MENU ====================*/
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),
@@ -46,13 +38,16 @@ let resumeButton = document.getElementById('resume-button')
 
 // html2pdf options
 let opt = {
-  margin: 0,
+  margin: 1,
   filename: 'HaQuyenResume.pdf',
-  image: { type: 'jpeg', quality: 0.98 },
+  image: { type: 'jpeg', quality: 1 },
   html2canvas: { scale: 4 },
   jsPDF: { format: 'a4', orientation: 'portrait' },
 }
 
+html2pdf().set({
+  pagebreak: { mode: ['avoid-all', 'css', 'legacy'] },
+})
 // function to call areaCv and html2pdf
 function generateResume() {
   html2pdf(areaCv, opt)
@@ -61,7 +56,7 @@ function generateResume() {
 resumeButton.addEventListener('click', () => {
   scaleCv()
   generateResume()
-  setTimeout(removeScale, 5000)
+  // setTimeout(removeScale, 5000)
 })
 
 /*==================== PORTFOLIO SWIPER  ====================*/
