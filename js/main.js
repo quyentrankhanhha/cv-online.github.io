@@ -41,7 +41,7 @@ let opt = {
   margin: 1,
   filename: 'HaQuyenResume.pdf',
   image: { type: 'jpeg', quality: 1 },
-  html2canvas: { scale: 4 },
+  html2canvas: { scale: 5, scrollX: -15, scrollY: 0 },
   jsPDF: { format: 'a4', orientation: 'portrait' },
 }
 
@@ -56,7 +56,7 @@ function generateResume() {
 resumeButton.addEventListener('click', () => {
   scaleCv()
   generateResume()
-  // setTimeout(removeScale, 5000)
+  setTimeout(removeScale, 3000)
 })
 
 /*==================== PORTFOLIO SWIPER  ====================*/
